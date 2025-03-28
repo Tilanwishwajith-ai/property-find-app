@@ -1,0 +1,296 @@
+/* General styles for the property details page */
+.property-details {
+  font-family: Arial, sans-serif;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.property-details h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.property-info {
+  margin-top: 20px;
+}
+
+.property-info h1 {
+  font-size: 20px;
+  color: #444;
+}
+
+.property-info p {
+  font-size: 16px;
+  margin: 8px 0;
+}
+
+.property-info strong {
+  color: #222;
+}
+
+/* Image display section */
+.image-display {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.large-image {
+  max-width: 100%;
+  max-height: 400px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prev-button {
+  left: 10px;
+}
+
+.next-button {
+  right: 10px;
+}
+
+.nav-button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Thumbnail gallery */
+.thumbnail-gallery {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  overflow-x: auto;
+}
+
+.thumbnail {
+  width: 80px;
+  height: 60px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  object-fit: cover;
+  transition: border-color 0.3s;
+}
+
+.thumbnail.active {
+  border-color: #007bff;
+}
+
+.thumbnail:hover {
+  border-color: #007bff;
+}
+
+/* Tabs styling */
+.react-tabs__tab-list {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ddd;
+}
+
+.react-tabs__tab {
+  padding: 10px 15px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  border-bottom: none;
+  background-color: #f9f9f9;
+  border-radius: 4px 4px 0 0;
+}
+
+.react-tabs__tab--selected {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+.react-tabs__tab-panel {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 0 0 4px 4px;
+  background-color: #f9f9f9;
+}
+
+/* Floor plan container */
+.floor-plan-container {
+  display: flex;
+  justify-content: center;
+}
+
+.floor-plan {
+  max-width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Google Map iframe */
+iframe {
+  border: none;
+}
+
+/* Exit button */
+.exit-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.exit-button:hover {
+  background-color: #0056b3;
+}
+
+/* Media Query for Tablets */
+@media (max-width: 768px) {
+  .property-details {
+    padding: 15px;
+  }
+
+  .property-details h2 {
+    font-size: 20px;
+  }
+
+  .property-info h1 {
+    font-size: 18px;
+  }
+
+  .property-info p {
+    font-size: 14px;
+  }
+
+  .image-display {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .large-image {
+    max-height: 300px;
+  }
+
+  .thumbnail-gallery {
+    margin-top: 10px;
+    gap: 8px;
+  }
+
+  .thumbnail {
+    width: 70px;
+    height: 50px;
+  }
+
+  .react-tabs__tab {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+  .large-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .thumbnail {
+    width: 100%;
+    height: auto;
+  }
+  .exit-button {
+    .nav-button {
+      width: 30px;
+      height: 30px;
+      font-size: 16px;
+    }
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+/* Media Query for Phones */
+@media (max-width: 480px) {
+  .property-details {
+    padding: 10px;
+  }
+
+  .property-details h2 {
+    font-size: 18px;
+  }
+
+  .property-info h1 {
+    font-size: 16px;
+  }
+
+  .property-info p {
+    font-size: 12px;
+  }
+
+  .image-display {
+    margin: 10px 0;
+  .large-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .thumbnail {
+    width: 100%;
+    height: auto;
+  }
+
+  .nav-button {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+  }
+
+  .large-image {
+    max-height: 250px;
+  }
+
+  .thumbnail-gallery {
+    gap: 5px;
+  }
+
+  .thumbnail {
+    width: 60px;
+    height: 45px;
+  }
+
+  .react-tabs__tab {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .exit-button {
+    font-size: 12px;
+    padding: 6px 14px;
+  }
+}

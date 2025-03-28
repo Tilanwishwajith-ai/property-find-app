@@ -1,0 +1,166 @@
+/* Layout Styles */
+.search-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  color: #333;
+}
+
+input, select {
+  margin-top: 8px;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+  border-color: #007bff;
+}
+
+/* Date picker container */
+.date-picker-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Buttons */
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  grid-column: span 4;
+}
+
+button {
+  padding: 15px 16px;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.reset-button {
+  width: 10%;
+  background-color: #6c757d;
+  color: #fff;
+  margin-left: 10px;
+}
+
+.reset-button:hover {
+  background-color: #5a6268;
+}
+
+/* Custom Header for DatePicker */
+.custom-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  background-color: #e9ecef;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.custom-header button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #007bff;
+}
+
+.custom-header button:disabled {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets (width between 768px and 1024px) */
+@media (max-width: 1024px) {
+  .form-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  }
+
+  .form-buttons {
+    grid-column: span 3; /* Span the full width */
+  }
+
+  .reset-button {
+    width: 20%; /* Make the reset button larger */
+  }
+}
+
+/* For phones (width below 768px) */
+@media (max-width: 768px) {
+  .search-form {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr; /* 1 column layout */
+    gap: 10px; /* Reduced gap */
+  }
+
+  label {
+    font-size: 14px; /* Adjust label font size */
+  }
+
+  input, select {
+    font-size: 6px; /* Adjust input and select font size */
+  }
+
+  .form-buttons {
+    flex-direction: column; /* Stack the buttons vertically */
+    justify-content: center;
+  }
+
+  .reset-button {
+    width: 100%; /* Full width reset button */
+    margin-left: 0; /* Remove margin */
+    margin-top: 10px; /* Add some spacing */
+  }
+
+  button {
+    width: 100%; /* Ensure buttons are full width */
+  }
+
+  .custom-header {
+    font-size: 14px; /* Adjust font size for small screens */
+  }
+}

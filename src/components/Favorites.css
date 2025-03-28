@@ -1,0 +1,165 @@
+/* Container for the favorites section */
+.favorites-container {
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Title styling */
+.favorites-container h3 {
+  font-size: 1.8em;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Drop zone styling */
+.favorites-drop-zone {
+  min-height: 150px;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.favorites-drop-zone:hover {
+  background-color: #eaf7ff;
+  border-color: #80bdff;
+}
+
+/* Styling for when there are no favorites */
+.favorites-drop-zone p {
+  font-size: 1.2em;
+  color: #777;
+  text-align: center;
+  margin: 0;
+}
+
+/* Favorite item container */
+.favorite-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px 15px;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: grab;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.favorite-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Text inside each favorite item */
+.favorite-item p {
+  margin: 5px 0;
+  font-size: 1em;
+  color: #444;
+}
+
+.favorite-item p:first-child {
+  font-weight: bold;
+  color: #000;
+}
+
+/* Remove button styling */
+.favorite-item button {
+  align-self: flex-end;
+  background-color: #ff6b6b;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease;
+}
+
+.favorite-item button:hover {
+  background-color: #e65a5a;
+}
+
+/* When dragging starts */
+.favorite-item:active {
+  cursor: grabbing;
+}
+
+/* Highlight drop zone when dragging */
+.favorites-drop-zone.drag-over {
+  background-color: #d9f2ff;
+  border-color: #007bff;
+}
+/* Media Query for Tablets */
+@media (max-width: 768px) {
+  .favorites-container {
+    padding: 15px;
+  }
+
+  .favorites-container h3 {
+    font-size: 1.6em;
+  }
+
+  .favorites-drop-zone {
+    padding: 15px;
+  }
+
+  .favorites-drop-zone p {
+    font-size: 1em;
+  }
+
+  .favorite-item {
+    padding: 8px 12px;
+  }
+
+  .favorite-item p {
+    font-size: 0.9em;
+  }
+
+  .favorite-item button {
+    font-size: 0.8em;
+    padding: 4px 8px;
+  }
+}
+
+/* Media Query for Phones */
+@media (max-width: 480px) {
+  .favorites-container {
+    padding: 10px;
+  }
+
+  .favorites-container h3 {
+    font-size: 1.4em;
+  }
+
+  .favorites-drop-zone {
+    padding: 10px;
+  }
+
+  .favorites-drop-zone p {
+    font-size: 0.9em;
+  }
+
+  .favorite-item {
+    padding: 6px 10px;
+  }
+
+  .favorite-item p {
+    font-size: 0.8em;
+  }
+
+  .favorite-item button {
+    font-size: 0.7em;
+    padding: 3px 6px;
+  }
+}
